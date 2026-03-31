@@ -18,6 +18,7 @@ body {
     font-family: "Inter", sans-serif;
     color: var(--ink);
     background: radial-gradient(circle at 18% -4%, #dff4e9 0, #f7fffb 36%, #ffffff 63%);
+    font-size: 18px;
 }
 
 img {
@@ -26,7 +27,7 @@ img {
 }
 
 .container {
-    width: min(1150px, 92vw);
+    width: min(1540px, 100% - clamp(18px, 2.8vw, 48px));
     margin: 0 auto;
 }
 
@@ -63,12 +64,12 @@ img {
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
-    padding: 1.8rem 0 1.2rem;
+    padding: 2rem 0 1.4rem;
 }
 
 .logo {
     color: var(--green);
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
 }
 
@@ -80,7 +81,7 @@ img {
 .nav a {
     text-decoration: none;
     color: #a6a6a6;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
 }
 
 .nav a.active {
@@ -95,21 +96,22 @@ img {
 }
 
 .auth .btn {
-    padding: 0.62rem 1.2rem;
+    padding: 0.72rem 1.35rem;
+    font-size: 1.02rem;
 }
 
 .hero {
     display: grid;
-    grid-template-columns: 1fr 0.92fr;
-    gap: 2rem;
+    grid-template-columns: 1.02fr 0.98fr;
+    gap: 3rem;
     align-items: center;
-    padding: 2.6rem 0 3.2rem;
+    padding: 3.8rem 0 4.8rem;
 }
 
 .hero-copy h1 {
-    font-size: clamp(2.4rem, 5vw, 4.05rem);
-    line-height: 1.07;
-    max-width: 550px;
+    font-size: clamp(3.4rem, 6.3vw, 5.9rem);
+    line-height: 1.05;
+    max-width: 700px;
 }
 
 .wave {
@@ -119,21 +121,22 @@ img {
 
 .hero-copy p {
     color: #7d7d7d;
-    font-size: 1rem;
-    max-width: 500px;
-    line-height: 1.7;
+    font-size: 1.3rem;
+    max-width: 640px;
+    line-height: 1.8;
 }
 
 .hero-actions {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 2.25rem;
 }
 
 .btn-pill {
     border-radius: 999px;
-    padding: 0.9rem 1.55rem;
+    padding: 1rem 1.8rem;
+    font-size: 1rem;
 }
 
 .watch-btn {
@@ -157,16 +160,17 @@ img {
 }
 
 .hero-art img {
-    max-width: 465px;
+    max-width: 760px;
+    width: 100%;
 }
 
 .brands {
     text-align: center;
-    padding-bottom: 4rem;
+    padding-bottom: 5rem;
 }
 
 .brands h3 {
-    font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+    font-size: clamp(2.2rem, 3.9vw, 3.2rem);
 }
 
 .brand-list {
@@ -177,17 +181,18 @@ img {
     gap: 2.2rem;
     color: #a8a8a8;
     font-weight: 700;
+    font-size: 1.08rem;
 }
 
 .support-wrap {
     background: #f9f9fb;
-    padding: 4.8rem 0;
+    padding: 6.2rem 0;
 }
 
 .support {
     display: grid;
     grid-template-columns: 1fr 0.95fr;
-    gap: 2.5rem;
+    gap: 3.8rem;
 }
 
 .support-copy h2,
@@ -195,7 +200,7 @@ img {
 .benefits-copy h2,
 .pricing-head h2,
 .contact-copy h2 {
-    font-size: clamp(1.85rem, 3.6vw, 3.05rem);
+    font-size: clamp(2.5rem, 4.6vw, 4rem);
     line-height: 1.22;
 }
 
@@ -205,6 +210,7 @@ img {
     color: #8f8f8f;
     line-height: 1.7;
     max-width: 560px;
+    font-size: 1.16rem;
 }
 
 .rating-row {
@@ -229,6 +235,7 @@ img {
 
 .rating-card small {
     color: #8c8c8c;
+    font-size: 1.02rem;
 }
 
 .support-cards {
@@ -239,7 +246,7 @@ img {
 .support-cards article {
     background: #fff;
     border-radius: 12px;
-    padding: 1rem;
+    padding: 1.2rem 1.1rem;
     display: grid;
     grid-template-columns: 36px 1fr;
     gap: 1rem;
@@ -252,18 +259,18 @@ img {
 }
 
 .support-cards h4 {
-    font-size: 1.2rem;
+    font-size: 1.28rem;
 }
 
 .support-cards p {
     margin-top: 0.3rem;
     color: #8d8d8d;
     line-height: 1.6;
-    font-size: 0.95rem;
+    font-size: 1.08rem;
 }
 
 .features {
-    padding: 5.6rem 0 4.9rem;
+    padding: 7rem 0 6.2rem;
 }
 
 .feature-head {
@@ -282,7 +289,7 @@ img {
     margin-top: 2.4rem;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.2rem;
+    gap: 2.4rem;
 }
 
 .feature-grid article img {
@@ -292,22 +299,22 @@ img {
 
 .feature-grid h4 {
     margin-top: 1.2rem;
-    font-size: 1.4rem;
+    font-size: 1.7rem;
 }
 
 .feature-grid p {
     margin-top: 0.6rem;
     color: #8d8d8d;
     line-height: 1.7;
-    font-size: 0.96rem;
+    font-size: 1.14rem;
 }
 
 .benefits {
-    padding: 4rem 0 5rem;
+    padding: 5.6rem 0 6.6rem;
     display: grid;
     grid-template-columns: 0.95fr 1fr;
-    gap: 2rem;
-    align-items: center;
+    gap: 3.4rem;
+    align-items: start;
 }
 
 .benefits-copy ul {
@@ -319,6 +326,7 @@ img {
 
 .benefits-copy li {
     font-weight: 500;
+    font-size: 1.2rem;
 }
 
 .benefits-copy li::before {
@@ -363,7 +371,7 @@ img {
 
 .pricing-wrap {
     background: linear-gradient(180deg, #ffffff 0%, #f9fffc 100%);
-    padding: 5rem 0 6.5rem;
+    padding: 6.6rem 0 7.8rem;
 }
 
 .pricing-head {
@@ -405,7 +413,7 @@ img {
     margin-top: 2.6rem;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.1rem;
+    gap: 2.2rem;
     align-items: end;
 }
 
@@ -413,18 +421,18 @@ img {
     background: #fff;
     border: 1px solid #edf1ef;
     border-radius: 16px;
-    padding: 2rem 1.25rem 1.3rem;
+    padding: 2.6rem 1.6rem 1.7rem;
     text-align: center;
     box-shadow: 0 10px 25px rgba(30, 37, 32, 0.05);
 }
 
 .plan-card h4 {
-    font-size: 1.85rem;
+    font-size: 2.2rem;
 }
 
 .plan-card>p {
     margin: 0.55rem auto 0;
-    font-size: 0.9rem;
+    font-size: 1.08rem;
     color: #8e8e8e;
     max-width: 225px;
     min-height: 40px;
@@ -432,7 +440,7 @@ img {
 
 .amount {
     margin: 0.75rem 0 0.85rem;
-    font-size: 3rem;
+    font-size: 3.7rem;
     font-weight: 700;
 }
 
@@ -453,7 +461,7 @@ img {
 }
 
 .plan-card li {
-    font-size: 0.9rem;
+    font-size: 1.06rem;
     font-weight: 500;
 }
 
@@ -497,7 +505,7 @@ img {
     background: #7bd9b3;
     border-radius: 999px;
     padding: 0.4rem 0.8rem;
-    font-size: 0.75rem;
+    font-size: 0.92rem;
     font-weight: 600;
 }
 
@@ -509,13 +517,13 @@ img {
 .contact-wrap {
     background: #161c28;
     color: #fff;
-    padding: 5rem 0 2.4rem;
+    padding: 6.4rem 0 3.4rem;
 }
 
 .contact {
     display: grid;
     grid-template-columns: 1.1fr 0.85fr;
-    gap: 2.2rem;
+    gap: 3.6rem;
     align-items: start;
 }
 
@@ -524,6 +532,7 @@ img {
     color: #a5adba;
     max-width: 470px;
     line-height: 1.7;
+    font-size: 1.14rem;
 }
 
 .contact-copy img {
@@ -536,6 +545,7 @@ img {
     max-width: 520px;
     line-height: 1.7;
     font-style: normal;
+    font-size: 1.12rem;
 }
 
 .avatars {
@@ -561,13 +571,13 @@ img {
 
 .contact-card h4 {
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     margin-bottom: 0.4rem;
 }
 
 .contact-card label {
     color: #d5dde9;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .contact-card input,
@@ -621,7 +631,7 @@ img {
     color: #fff;
     width: 100%;
     font-family: inherit;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .email-capture input:focus {
@@ -655,7 +665,7 @@ img {
     margin-bottom: 0.5rem;
     color: #a7afbd;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1.02rem;
 }
 
 @media (max-width: 1050px) {
