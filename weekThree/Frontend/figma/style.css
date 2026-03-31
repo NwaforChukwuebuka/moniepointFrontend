@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.circleLogo{
+    width: 25px;
+    height: 25px;
+    border: 4px solid #EE8B8B;
+    border-radius: 50%;
+}
+.apparelLogo{
+    display: flex;
+    padding-bottom: 50px;
+    gap: 10px;
+}
+.apparelLogo span{
+    width: 100px;
+}
+
+.mainContainer{
+display: flex;
+justify-content: space-between;
+}
+
+.textWrapper{
+    padding-left: 130px;
+    padding-top: 35px;
+    padding-right: 300px;
+    background-color: white;
+    font-family: Josefin Sans;
+}
+.comingSoon h1{
+color: #CE9898;
+letter-spacing: 17.5px;
+line-height: 64px;
+font-size: 64px;
+}
+
+.comingSoon h2{
+letter-spacing: 17.5px;
+line-height: 64px;
+font-size: 64px;
+font-weight: bolder;
+font-family: Josefin Sans;
+width: 400px;
+color: #423A3A;
+padding-bottom: 4px;
+}
+
+.fellowShopper h1{
+    padding-top: 20px;
+    font-size: 0.875rem;
+    font-family: Josefin Sans;
+    width: 400px;
+    color: #CE9898;
+    line-height: 28px;
+    font-weight: 400px;
+
+}
+
+.inputGroup{
+    display: flex;
+    padding-top: 20px;
+    position: relative;
+}
+.inputGroup button{
+    background-color: #CE9898;
+    width: 80px;
+    height: 40px;
+    border: none;
+    color: white;
+    border-radius: 28px;
+    position: absolute;
+    right: -7px;
+}
+
+.inputGroup input{
+    display: flex;
+    border-radius: 28px;
+    width: 445px;
+    padding: 0px 20px;
+    height: 40px;
+    border: 1px solid red;
+}
+
+.inputGroup input::placeholder{
+color:#EE8B8B
+}
+

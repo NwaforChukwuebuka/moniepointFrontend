@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navBar ul{
+    color: blue;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+}
