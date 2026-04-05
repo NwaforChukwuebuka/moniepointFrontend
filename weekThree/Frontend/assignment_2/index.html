@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Educlass — Modern Solution for Education</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header" id="top">
+      <div class="container header__inner">
+        <a href="#top" class="logo" aria-label="Educlass home">
+          <img
+            class="logo__img"
+            src="images/logo.png"
+            alt=""
+            width="40"
+            height="40"
+            decoding="async"
+          />
+          <span class="logo__text">Educlass</span>
+        </a>
+        <nav class="nav" id="site-nav" aria-label="Primary">
+          <ul class="nav__list">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+          </ul>
+          <a href="#contact" class="btn btn--primary btn--sm header__cta">Contact Us</a>
+        </nav>
+        <button
+          type="button"
+          class="nav-toggle"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open menu"
+        >
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <h1 id="hero-heading" class="hero__title">
+              Modern Solution for <span class="text-blue">Education</span>
+            </h1>
+            <p class="hero__lead">
+              Showcase strategy outcomes with education dashboards. Track student performance,
+              attendance rates, test scores, and more.
+            </p>
+            <div class="hero__actions">
+              <a href="#pricing" class="btn btn--primary">Try Free Trial</a>
+              <a href="#demo" class="hero__video hero__video--demo">
+                <span class="hero__play hero__play--primary" aria-hidden="true">
+                  <img src="images/play.png" alt="" width="14" height="14" />
+                </span>
+                View Demo
+              </a>
+            </div>
+          </div>
+          <div class="hero__visual">
+            <img
+              src="images/Group%2095.png"
+              alt="Educlass dashboard preview with charts and analytics"
+              class="hero__img"
+              width="720"
+              height="540"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="about section" id="about" aria-labelledby="about-heading">
+        <div class="container about__grid">
+          <div class="about__content">
+            <h2 id="about-heading" class="section-title section-title--left">
+              Empower students &amp; teacher with Educlass
+            </h2>
+            <p class="about__text">
+              Educlass helps schools and teachers streamline day-to-day work so you can focus on
+              outcomes and improve your learning platform digitally.
+            </p>
+            <div class="about__stats" role="list">
+              <div class="about__stat" role="listitem">
+                <img
+                  class="about__stat-icon"
+                  src="images/building.png"
+                  alt=""
+                  width="40"
+                  height="40"
+                />
+                <span class="about__stat-value">1700+</span>
+                <span class="about__stat-label">Schools</span>
+              </div>
+              <div class="about__stat" role="listitem">
+                <img
+                  class="about__stat-icon"
+                  src="images/users.png"
+                  alt=""
+                  width="40"
+                  height="40"
+                />
+                <span class="about__stat-value">30K+</span>
+                <span class="about__stat-label">Users</span>
+              </div>
+              <div class="about__stat" role="listitem">
+                <img
+                  class="about__stat-icon"
+                  src="images/Group%2014320.png"
+                  alt=""
+                  width="40"
+                  height="40"
+                />
+                <span class="about__stat-value">34+</span>
+                <span class="about__stat-label">Cities</span>
+              </div>
+            </div>
+            <a href="#features" class="btn btn--primary about__cta">Learn More</a>
+          </div>
+          <div class="about__media" aria-hidden="true">
+            <div class="about__placeholder"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="features section" id="features" aria-labelledby="features-heading">
+        <div class="container">
+          <header class="features__header">
+            <h2 id="features-heading" class="section-title">Our Main Features</h2>
+            <p class="section-subtitle">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </p>
+          </header>
+
+          <article class="feature-row">
+            <div class="feature-row__media">
+              <img
+                src="images/main-ft.png"
+                alt="Schedule classes and exams interface"
+                loading="lazy"
+              />
+            </div>
+            <div class="feature-row__body">
+              <h3 class="feature-row__title">Easily schedule class lessons and exams</h3>
+              <p class="feature-row__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <a href="#" class="link-arrow">Learn more about schedule management</a>
+            </div>
+          </article>
+
+          <article class="feature-row feature-row--reverse">
+            <div class="feature-row__media">
+              <img
+                src="images/Image%20(2).png"
+                alt="Daily achievements and progress dashboard"
+                loading="lazy"
+              />
+            </div>
+            <div class="feature-row__body">
+              <h3 class="feature-row__title">Organize and monitor daily class achievements</h3>
+              <p class="feature-row__text">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+              </p>
+              <a href="#" class="link-arrow">Learn more about daily achievements</a>
+            </div>
+          </article>
+
+          <article class="feature-row">
+            <div class="feature-row__media">
+              <img
+                src="images/Image%20(3).png"
+                alt="Task list and teaching workflow"
+                loading="lazy"
+              />
+            </div>
+            <div class="feature-row__body">
+              <h3 class="feature-row__title">Manage Taxes, and Get Ease of Teaching</h3>
+              <p class="feature-row__text">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+              </p>
+              <a href="#" class="link-arrow">Learn more about task management</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section
+        class="testimonials section"
+        id="testimonials"
+        aria-labelledby="testimonials-heading"
+      >
+        <div class="container">
+          <header class="testimonials__header">
+            <h2 id="testimonials-heading" class="section-title section-title--light">
+              School and Parents Words
+            </h2>
+            <p class="section-subtitle section-subtitle--light">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+              incididunt ut labore.
+            </p>
+          </header>
+
+          <div class="testimonials__carousel" data-carousel>
+            <div class="testimonials__track" data-carousel-track>
+              <article class="testimonial-card" data-carousel-item>
+                <div class="testimonial-card__avatar" aria-hidden="true">
+                  <img src="images/Group%2039512.png" alt="" width="64" height="64" />
+                </div>
+                <h3 class="testimonial-card__name">Ashley Young</h3>
+                <p class="testimonial-card__role">School Principal</p>
+                <p class="testimonial-card__quote">
+                  “Educlass transformed how we coordinate lessons and communicate with parents. The
+                  dashboard is intuitive and our staff adopted it quickly.”
+                </p>
+              </article>
+              <article class="testimonial-card" data-carousel-item>
+                <div class="testimonial-card__avatar" aria-hidden="true">
+                  <img src="images/Group%2039514.png" alt="" width="64" height="64" />
+                </div>
+                <h3 class="testimonial-card__name">Kim Young</h3>
+                <p class="testimonial-card__role">Parent</p>
+                <p class="testimonial-card__quote">
+                  “I can finally see my child’s progress in one place. Notifications and schedules
+                  keep our family on track without endless emails.”
+                </p>
+              </article>
+              <article class="testimonial-card" data-carousel-item>
+                <div class="testimonial-card__avatar testimonial-card__avatar--initials" aria-hidden="true">
+                  JC
+                </div>
+                <h3 class="testimonial-card__name">Jennifer Croft</h3>
+                <p class="testimonial-card__role">Teacher</p>
+                <p class="testimonial-card__quote">
+                  “Planning classes and tracking tasks is so much faster. I spend less time on admin
+                  and more time with students.”
+                </p>
+              </article>
+            </div>
+            <div class="testimonials__nav">
+              <button
+                type="button"
+                class="testimonials__arrow"
+                data-carousel-prev
+                aria-label="Previous testimonial"
+              >
+                <img src="images/Button-Left.png" alt="" width="48" height="48" />
+              </button>
+              <button
+                type="button"
+                class="testimonials__arrow"
+                data-carousel-next
+                aria-label="Next testimonial"
+              >
+                <img src="images/Button-Right.png" alt="" width="48" height="48" />
+              </button>
+            </div>
+          </div>
+          <div class="testimonials__cta-wrap">
+            <a href="#pricing" class="btn btn--outline-light">View More</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section class="pricing section" id="pricing" aria-labelledby="pricing-heading">
+        <div class="container">
+          <header class="pricing__header">
+            <h2 id="pricing-heading" class="section-title">Let’s set your plan</h2>
+            <p class="section-subtitle">
+              Choose the plan that fits your school or district. Upgrade or downgrade anytime.
+            </p>
+          </header>
+          <div class="pricing__grid">
+            <article class="price-card">
+              <div class="price-card__icon" aria-hidden="true">
+                <img src="images/Group%2014320.png" alt="" width="48" height="48" />
+              </div>
+              <h3 class="price-card__name">Starter</h3>
+              <p class="price-card__price"><span class="price-card__currency">$</span>399<span class="price-card__period">/mo</span></p>
+              <ul class="price-card__list">
+                <li>Up to 500 students</li>
+                <li>Core scheduling tools</li>
+                <li>Email support</li>
+                <li>Basic analytics</li>
+              </ul>
+              <a href="#contact" class="btn btn--primary btn--block">Get Started</a>
+            </article>
+            <article class="price-card price-card--featured">
+              <span class="price-card__badge">Recommended</span>
+              <div class="price-card__icon" aria-hidden="true">
+                <img src="images/Group%2039512.png" alt="" width="48" height="48" />
+              </div>
+              <h3 class="price-card__name">Extended</h3>
+              <p class="price-card__price"><span class="price-card__currency">$</span>899<span class="price-card__period">/mo</span></p>
+              <ul class="price-card__list">
+                <li>Unlimited students</li>
+                <li>Advanced scheduling &amp; exams</li>
+                <li>Priority support</li>
+                <li>Full analytics suite</li>
+                <li>Parent portal</li>
+              </ul>
+              <a href="#contact" class="btn btn--light btn--block">Get Started</a>
+            </article>
+            <article class="price-card">
+              <div class="price-card__icon" aria-hidden="true">
+                <img src="images/Group%2039514.png" alt="" width="48" height="48" />
+              </div>
+              <h3 class="price-card__name">Enterprise</h3>
+              <p class="price-card__price"><span class="price-card__currency">$</span>1299<span class="price-card__period">/mo</span></p>
+              <ul class="price-card__list">
+                <li>Multi-campus support</li>
+                <li>Custom integrations</li>
+                <li>Dedicated success manager</li>
+                <li>SLA &amp; training</li>
+              </ul>
+              <a href="#contact" class="btn btn--primary btn--block">Get Started</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Demo CTA -->
+      <section class="demo section" id="demo" aria-labelledby="demo-heading">
+        <div class="container demo__grid">
+          <div class="demo__media">
+            <img
+              src="images/Mask%20group.png"
+              alt="Educlass demo on laptop screen"
+              class="demo__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="demo__content">
+            <div class="demo__brand" aria-hidden="true">
+              <img
+                class="logo__img logo__img--on-dark"
+                src="images/logo.png"
+                alt=""
+                width="40"
+                height="40"
+                decoding="async"
+              />
+              <span class="demo__brand-text">Educlass</span>
+            </div>
+            <h2 id="demo-heading" class="demo__title">
+              Try Educlass demo now and start modernizing your teaching method.
+            </h2>
+            <p class="demo__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante
+              venenatis dapibus posuere velit aliquet.
+            </p>
+            <div class="demo__actions">
+              <a href="#pricing" class="btn btn--primary">Try Free Trial</a>
+              <a href="#top" class="demo__video">
+                <span class="hero__play hero__play--light" aria-hidden="true">▶</span>
+                Watch Video
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contact">
+      <div class="container footer__inner">
+        <a href="#top" class="logo logo--footer footer__brand" aria-label="Educlass home">
+          <img
+            class="logo__img"
+            src="images/logo.png"
+            alt=""
+            width="40"
+            height="40"
+            decoding="async"
+          />
+          <span class="logo__text logo__text--footer">Educlass</span>
+        </a>
+        <div class="footer__bottom">
+          <p class="footer__copy">© 2021 Educlass. All rights reserved.</p>
+          <nav class="footer__nav" aria-label="Footer">
+            <a href="#about">About</a>
+            <a href="#features">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms &amp; Conditions</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
