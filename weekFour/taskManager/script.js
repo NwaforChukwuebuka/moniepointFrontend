@@ -25,3 +25,13 @@
 //         li.remove()
 //     }
 // })
+
+
+const taskList = document.querySelector('#task-list ul')
+taskList.addEventListener('click', (event) =>  {
+    console.log(event)
+    if(event.target.className === 'delete')    {
+        const li = event.target.parentNode
+        li.remove()
+    }
+})
