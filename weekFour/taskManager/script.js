@@ -48,18 +48,59 @@ form.addEventListener('submit', (event) => {
     }
 
 
-    const liTag = document.createElement('li')
-    const firstSpanTag = document.createElement('span')
-    const secondSpanTag = document.createElement('span')
+    const { firstSpanTag, secondSpanTag, liTag } = createElement()
+    addTextContent(firstSpanTag, taskInput, secondSpanTag)
+    appendChild(liTag, firstSpanTag, secondSpanTag)
+    addClassName(firstSpanTag, secondSpanTag)
 
-    firstSpanTag.textContent = taskInput
-    secondSpanTag.textContent = 'delete'
 
-    liTag.appendChild(firstSpanTag)
-    liTag.appendChild(secondSpanTag)
+    form.reset() //Resets the form fields to their default values after submission
+
+
+    function createElement() {
+        const liTag = document.createElement('li')
+        const firstSpanTag = document.createElement('span')
+        const secondSpanTag = document.createElement('span')
+        return { firstSpanTag, secondSpanTag, liTag }
+    }
+})
+
+// search task
+const searchForm = document.querySelector('#search-tasks')
+searchForm.addEventListener('submit', (event) => {
+    event.preventDefault()
+    const searchInput = document.querySelector('#search-tasks input').value.toLowerCase()
+    console.log(searchInput)
+
+    const tasks = document.querySelectorAll('#task-list ul li')
+    taskSearch(tasks, searchInput)
+})
+
+
+
+function taskSearch(tasks, searchInput) {
+    tasks.forEach((task) => {
+        const taskName = task.querySelector('.name').textContent.toLowerCase()
+        if (taskName.includes(searchInput)) {
+            task.style.display = ''
+        } else {
+            task.style.display = 'none'
+        }
+    })
+}
+
+function addClassName(firstSpanTag, secondSpanTag) {
     firstSpanTag.classList.add('name')
     secondSpanTag.classList.add('delete')
+}
 
+function appendChild(liTag, firstSpanTag, secondSpanTag) {
+    liTag.appendChild(firstSpanTag)
+    liTag.appendChild(secondSpanTag)
     taskList.appendChild(liTag)
-    form.reset() //Resets the form fields to their default values after submission
-})
+}
+
+function addTextContent(firstSpanTag, taskInput, secondSpanTag) {
+    firstSpanTag.textContent = taskInput
+    secondSpanTag.textContent = 'delete'
+}
