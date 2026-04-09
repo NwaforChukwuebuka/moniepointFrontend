@@ -24,6 +24,8 @@ const PRODUCT_URL = 'https://dummyjson.com/products';
 //         .catch(error => console.log(error));
 // }
 
+
+// async/await syntax
 async function getProducts(PRODUCT_URL) {
     try {
         const response = await fetch(PRODUCT_URL);
