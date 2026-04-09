@@ -66,4 +66,19 @@ const evenNumbers = numbers.filter(num => num % 2 === 0)
 console.log(evenNumbers) //Output: [ 2, 4 ]
 
 
+// reduce - executes a reducer function on each element of the array, resulting in a single output value
+const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+console.log(sum) //Output: 15
 
+//every - tests whether all elements in the array pass the test implemented by the provided function
+const allEven = numbers.every(num => num % 2 === 0)
+console.log(allEven) //Output: false    
+
+// reverse - reverses an array in place. The first array element becomes the last, and the last array element becomes the first.
+numbers.reverse()
+console.log(numbers) //Output: [ 5, 4, 3, 2, 1 ]    
+
+// forOf - iterates over iterable objects (including arrays) and executes a provided function once for each value
+for (const num of numbers) {
+    console.log(num) //Output: 5 4 3 2 1
+}
