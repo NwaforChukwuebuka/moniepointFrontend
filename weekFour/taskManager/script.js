@@ -26,7 +26,7 @@
 //     }
 // })
 
-
+// delete task using class name
 const taskList = document.querySelector('#task-list ul')
 taskList.addEventListener('click', (event) =>  {
     console.log(event)
@@ -34,4 +34,17 @@ taskList.addEventListener('click', (event) =>  {
         const li = event.target.parentNode
         li.remove()
     }
+})
+
+//add task
+const form = document.querySelector('#add-task')
+form.addEventListener('submit', (event) => {
+    event.preventDefault() //Prevents the default action of the form submission
+    const taskInput = document.querySelector('#add-task input').value
+    console.log(taskInput)
+    if(!taskInput)    {
+        alert('Please enter a task')
+        return
+    }
+
 })
