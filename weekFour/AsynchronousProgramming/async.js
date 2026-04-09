@@ -17,11 +17,21 @@ const PRODUCT_URL = 'https://dummyjson.com/products';
 
 
 
-function getProducts(PRODUCT_URL) {
-    fetch(PRODUCT_URL)
-        .then(res => res.json())
-        .then(data => console.log(data))
-        .catch(error => console.log(error));
+// function getProducts(PRODUCT_URL) {
+//     fetch(PRODUCT_URL)
+//         .then(Response => Response.json())
+//         .then(data => console.log(data))
+//         .catch(error => console.log(error));
+// }
+
+async function getProducts(PRODUCT_URL) {
+    try {
+        const response = await fetch(PRODUCT_URL);
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.log(error);
+    }
 }
 getProducts(PRODUCT_URL);
 
