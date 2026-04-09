@@ -47,4 +47,19 @@ form.addEventListener('submit', (event) => {
         return
     }
 
+
+    const liTag = document.createElement('li')
+    const firstSpanTag = document.createElement('span')
+    const secondSpanTag = document.createElement('span')
+
+    firstSpanTag.textContent = taskInput
+    secondSpanTag.textContent = 'delete'
+
+    liTag.appendChild(firstSpanTag)
+    liTag.appendChild(secondSpanTag)
+    firstSpanTag.classList.add('name')
+    secondSpanTag.classList.add('delete')
+
+    taskList.appendChild(liTag)
+    form.reset() //Resets the form fields to their default values after submission
 })
