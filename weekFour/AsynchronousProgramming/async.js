@@ -13,14 +13,15 @@
 
 // Could be GET or POST/PUT/PATCH/DELETE
 
-const PRODUCT_URL = 'https://dummyjson.com/test';
+const PRODUCT_URL = 'https://dummyjson.com/products';
 
 
 
 function getProducts(PRODUCT_URL) {
     fetch(PRODUCT_URL)
         .then(res => res.json())
-        .then(console.log);
+        .then(data => console.log(data))
+        .catch(error => console.log(error));
 }
 getProducts(PRODUCT_URL);
 
