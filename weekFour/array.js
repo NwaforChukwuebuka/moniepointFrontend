@@ -59,7 +59,11 @@ console.log(squareNumbers) //Output: [ 1, 4, 9, 16, 25 ]
 
 //map - returns a new array with the results of calling a provided function on every element in the calling array
 const squaredNumbers = numbers.map(num => num * num)
-console.log(squaredNumbers) //Output: [ 1, 4, 9, 16, 25 ]   
+console.log(squaredNumbers) //Output: [ 1, 4, 9, 16, 25 ] 
+
+//filter - returns a new array with all elements that pass the test implemented by the provided function
+const evenNumbers = numbers.filter(num => num % 2 === 0)
+console.log(evenNumbers) //Output: [ 2, 4 ]
 
 
 
