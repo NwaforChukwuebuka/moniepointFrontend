@@ -13,5 +13,15 @@
 // console.log(firstTask) //Output: <h2 class="title">Task Manager</h2>
 
 //querySelectorAll() - returns a static NodeList of all elements that match a specified CSS selector(s) in the document
-const allTitles = document.querySelectorAll('.title')
-console.log(allTitles) 
+// const allTitles = document.querySelectorAll('.title')
+// console.log(allTitles) 
+
+
+// const taskList = document.querySelector('#task-list ul')
+// taskList.addEventListener('click', (event) =>  {
+//     console.log(event)
+//     if(event.target.textContent === 'delete')    {
+//         const li = event.target.parentElement
+//         li.remove()
+//     }
+// })
