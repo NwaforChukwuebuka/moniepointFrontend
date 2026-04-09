@@ -70,7 +70,6 @@ const searchForm = document.querySelector('#search-tasks')
 searchForm.addEventListener('submit', (event) => {
     event.preventDefault()
     const searchInput = document.querySelector('#search-tasks input').value.toLowerCase()
-    console.log(searchInput)
 
     const tasks = document.querySelectorAll('#task-list ul li')
     taskSearch(tasks, searchInput)
