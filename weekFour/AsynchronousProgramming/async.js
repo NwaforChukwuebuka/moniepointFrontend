@@ -35,5 +35,6 @@ async function getProducts(PRODUCT_URL) {
         console.log(error);
     }
 }
+
 getProducts(PRODUCT_URL);
 
