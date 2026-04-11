@@ -4,7 +4,9 @@ A fully functional calculator built with vanilla HTML, CSS, and JavaScript — d
 
 ## Preview
 
-![Calculator UI](calculator.PNG)
+<p align="center">
+  <img src="calculator.PNG" alt="Pink Calculator UI" width="260" />
+</p>
 
 ## Features
 
