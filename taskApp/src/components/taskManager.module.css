@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.pageBanner {
+  text-align: center;
+}
+
+.title {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pageBanner p {
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.searchTasks input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.searchTasks input:focus {
+  border-color: #007bff;
+}
+
+.taskList {
+  margin-top: 20px;
+}
+
+.taskList ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.taskList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.taskList li:hover {
+  background: #eef3f8;
+}
+
+.name {
+  color: #333;
+  font-size: 15px;
+}
+
+.delete {
+  background: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.delete:hover {
+  background: #a71d2a;
+}
+
+.addTask {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.addTask input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+.addTask input:focus {
+  border-color: #007bff;
+}
+
+.addTask button {
+  padding: 10px 16px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.addTask button:hover {
+  background: #0056b3;
+}
+

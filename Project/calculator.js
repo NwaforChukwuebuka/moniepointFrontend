@@ -6,15 +6,17 @@ const calcEl      = document.querySelector('.calculator');
 
 // ── State ──────────────────────────────────────────────────────────────────
 let state = {
-  current:     '0',     // what's shown on the display
-  previous:    '',      // left operand as string
-  operator:    null,    // pending operator symbol
-  justEvaled:  false,   // true right after = was pressed
-  memory:      0,       // M storage
+  current:             '0',     // what's shown on the display
+  previous:            '',      // left operand as string
+  operator:            null,    // pending operator symbol
+  justEvaled:          false,   // true right after = was pressed
+  operatorJustPressed: false,   // true after operator, before any digit
+  memory:              0,       // M storage
 };
 
 // ── Display helpers ─────────────────────────────────────────────────────────
 function formatNumber(str) {
+  if (str === 'Error') return str;
   // Don't format if it contains an operator expression (expression line)
   if (/[+\-×÷]/.test(str)) return str;
 
@@ -75,6 +77,7 @@ function cleanResult(num) {
 // ── Button handlers ──────────────────────────────────────────────────────────
 
 function handleDigit(val) {
+  state.operatorJustPressed = false;
   if (state.justEvaled) {
     // Start fresh after =
     state.current    = val === '.' ? '0.' : val;
@@ -109,6 +112,12 @@ function handleDigit(val) {
 function handleOperator(op) {
   state.justEvaled = false;
 
+  // If no number was entered after the last operator, just replace the operator
+  if (state.operatorJustPressed) {
+    state.operator = op;
+    return;
+  }
+
   // If there's already a pending operation, evaluate it first
   if (state.operator && state.previous !== '') {
     const a = parseDisplay(state.previous);
@@ -122,6 +131,7 @@ function handleOperator(op) {
   state.previous = state.current;
   state.operator = op;
   state.current  = '0';
+  state.operatorJustPressed = true;
 }
 
 function handleEquals() {
@@ -143,11 +153,12 @@ function handleEquals() {
 }
 
 function handleClear() {
-  state.current    = '0';
-  state.previous   = '';
-  state.operator   = null;
-  state.justEvaled = false;
-  expressionEl.textContent = '';
+  state.current             = '0';
+  state.previous            = '';
+  state.operator            = null;
+  state.justEvaled          = false;
+  state.operatorJustPressed = false;
+  expressionEl.textContent  = '';
 }
 
 function handleBackspace() {
@@ -202,18 +213,15 @@ function handleMemory(action) {
 }
 
 function handleError() {
-  resultEl.textContent = 'Error';
-  expressionEl.textContent = '';
+  state.current             = 'Error';
+  state.previous            = '';
+  state.operator            = null;
+  state.justEvaled          = false;
+  state.operatorJustPressed = false;
+  resultEl.textContent      = 'Error';
+  expressionEl.textContent  = '';
   calcEl.classList.add('shake');
   calcEl.addEventListener('animationend', () => calcEl.classList.remove('shake'), { once: true });
-  // Auto-clear after a moment
-  setTimeout(() => {
-    state.current    = '0';
-    state.previous   = '';
-    state.operator   = null;
-    state.justEvaled = false;
-    updateDisplay();
-  }, 1200);
 }
 
 // ── Event listeners ──────────────────────────────────────────────────────────
@@ -226,6 +234,7 @@ document.querySelector('.buttons').addEventListener('click', (e) => {
   const value  = btn.dataset.value;
 
   if (action === 'clear')     { handleClear();         }
+  else if (state.current === 'Error') { /* block all input until cleared */ return; }
   else if (action === 'backspace') { handleBackspace(); }
   else if (action === 'percent')   { handlePercent();  }
   else if (action === 'sign')      { handleSign();     }
@@ -241,7 +250,9 @@ document.querySelector('.buttons').addEventListener('click', (e) => {
 document.addEventListener('keydown', (e) => {
   const k = e.key;
 
-  if (k >= '0' && k <= '9') { handleDigit(k); }
+  if (k === 'Escape' || k === 'Delete') { handleClear(); }
+  else if (state.current === 'Error') { /* block all input until cleared */ return; }
+  else if (k >= '0' && k <= '9') { handleDigit(k); }
   else if (k === '.')  { handleDigit('.'); }
   else if (k === '+')  { handleOperator('+'); }
   else if (k === '-')  { handleOperator('−'); }
@@ -250,7 +261,6 @@ document.addEventListener('keydown', (e) => {
   else if (k === '%')  { handlePercent(); }
   else if (k === 'Enter' || k === '=') { handleEquals(); }
   else if (k === 'Backspace') { handleBackspace(); }
-  else if (k === 'Escape' || k === 'Delete') { handleClear(); }
   else return;
 
   updateDisplay();
