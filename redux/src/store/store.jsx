@@ -1,9 +1,9 @@
-import React, { memo } from 'react'
+import { configureStore } from "@reduxjs/toolkit";
 
-const Store = () => {
-  return (
-    <div>Store</div>
-  )
-}
+const store = configureStore({
+  reducer: {
+    // Add your reducers here
+  },
+});
+export default store;
 
-export default memo(Store)
