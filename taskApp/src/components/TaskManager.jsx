@@ -6,6 +6,7 @@ const TaskManager = () => {
 
 const [tasks, setTasks] = useState([])
 const [newTask, setNewTask] = useState("")
+const [searchQuery, setSearchQuery] = useState("")
 
 const handleSubmit = (event) => {
     event.preventDefault();
@@ -25,6 +26,9 @@ const handleDeleteTask = (taskId) => {
     setTasks(filteredTasks);
 };
 
+const filteredTasks = tasks.filter((task) =>
+    task.name.toLowerCase().includes(searchQuery.toLowerCase())
+);
 
 useEffect(() => {
     const fetchTasks = async () => {
@@ -39,7 +43,7 @@ useEffect(() => {
 
     fetchTasks()
 
-}, [])                  // [] ensures the effect runs only once when the component mounts and contains the dependencies for the effect. In this case, since there are no dependencies, it will only run once.  
+}, [])                  // [] ensures the effect runs only once when the component mounts and contains the dependencies for the effect. In this case, since there are no dependencies, it will only run once.
 
     return (
         <div className={styles.wrapper}>
@@ -48,7 +52,7 @@ useEffect(() => {
                     <h1 className={styles.title}>Task Manager</h1>
 
                     <form className={styles.searchTasks}>
-                        <input type="text" placeholder="Search tasks..." />
+                        <input onChange={(e) => setSearchQuery(e.target.value)} type="text" placeholder="Search tasks..." />
                     </form>
                 </div>
             </header>
@@ -57,7 +61,7 @@ useEffect(() => {
                 <h2 className={styles.title}>Tasks to Do</h2>
 
                 <ul>
-                    {tasks?.map((task) => (
+                    {filteredTasks.map((task) => (
                         <li key={task.id}>
                             <span className={styles.name}>{task.name}</span>
                             <span onClick={() => handleDeleteTask(task.id)} className={styles.delete}>delete</span>
