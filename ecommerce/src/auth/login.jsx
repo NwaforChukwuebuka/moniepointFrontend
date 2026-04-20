@@ -1,5 +1,7 @@
 import React, { memo, useState } from 'react'
 import { useLoginMutation } from '../apis/fakeStoreApi';
+import styles from "./login.module.css"
+import { useNavigate } from 'react-router';
 
 
 const Login = () => {
@@ -12,6 +14,8 @@ const [userProfile, setUserProfile] = useState(userDetails);
 const [login, {isLoading,isError}] = useLoginMutation();
 const [errorMessage, setErrorMessage] = useState("");
 
+const navigate = useNavigate()
+
 function handleChange(e) {
     const { name, value } = e.target;
     setUserProfile((prev)=>({...prev,[name]: value}))
@@ -19,19 +23,18 @@ function handleChange(e) {
 
 async function handleSubmit(e) {
     e.preventDefault();
+    setErrorMessage("");
     try {
         const response = await login(userProfile).unwrap();
-        if(!token) {
-            setError("check your network") 
-            return;
-        }
         localStorage.setItem("token", response.token);
-        console.log(response)
+        navigate("/products");
     } catch (error) {
-        console.error("Login failed:", error);
-        setError("Invalid username or password");
+        if (error?.originalStatus === 401 || error?.status === 401) {
+            setErrorMessage("Incorrect username or password. Please try again.");
+        } else {
+            setErrorMessage("Something went wrong. Please try again later.");
+        }
     }
-    console.log(userProfile)
 }
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">

@@ -13,9 +13,17 @@ export const fakeStoreApi = createApi({
                 method: "POST",
                 body,
             })
-        })
+        }),
+        getAllProducts: builder.query({
+            query: () => "/products"
+        }),
+        getProductById: builder.query({
+            query: (id) => `/products/${id}`
+        }),
 
 })
+
+
 });
 
-export const { useLoginMutation } = fakeStoreApi;   
+export const { useLoginMutation, useGetAllProductsQuery, useGetProductByIdQuery } = fakeStoreApi;   
