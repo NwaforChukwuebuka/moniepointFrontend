@@ -50,3 +50,4 @@ coverage/
 # Local scratch notes (keep out of remote if present)
 SCRATCH.md
 *.scratch.md
+electionAppFrontend/plan.md
