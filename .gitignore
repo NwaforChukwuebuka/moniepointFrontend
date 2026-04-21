@@ -39,3 +39,14 @@ Thumbs.db
 # Test coverage
 coverage/
 **/coverage/
+
+# Accidental duplicate / typo stylesheet names (use *.module.css)
+**/*modulexx.css
+
+# Cursor / local IDE (optional; avoid committing machine-specific paths)
+.cursor/
+**/.cursor/
+
+# Local scratch notes (keep out of remote if present)
+SCRATCH.md
+*.scratch.md
